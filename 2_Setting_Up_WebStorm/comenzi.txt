@@ -1,0 +1,8 @@
+npm install -g @angular/cli
+
+ng new PROJECT
+
+npm install --save-dev --save-exact prettier
+npm install --global prettier
+
+nd serve --open
