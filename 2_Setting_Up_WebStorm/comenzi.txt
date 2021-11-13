@@ -6,3 +6,6 @@ npm install --save-dev --save-exact prettier
 npm install --global prettier
 
 nd serve --open
+
+// build
+ng build --base-href ./
