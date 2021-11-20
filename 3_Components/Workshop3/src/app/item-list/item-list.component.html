@@ -1,1 +1,12 @@
-<p>item-list works!</p>
+<div class="item-list">
+  <div *ngFor="let sellItem of sellItemsList; index as i"
+      class="item-list__item"
+      (click)="onItemClicked(sellItem, i)">
+    <span class="item-list__item__title"> {{ sellItem.name }} </span>
+    <span class="item-list__item__price"> {{ sellItem.price }} </span>
+    <span class="item-list__item__stock"> {{ sellItem.stock }} </span>
+    <img class="item-list__item__image"
+         src="{{ sellItem.imgUrl ? sellItem.imgUrl : 'https://image.freepik.com/free-vector/notebook-with-blank-page_100456-768.jpg' }}"
+         alt="{{ sellItem.imgAlt ? sellItem.imgAlt : 'no-picture' }}"/>
+  </div>
+</div>
