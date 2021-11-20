@@ -1,5 +1,3 @@
-## Google Developer Student Clubs UVT
+## Google Developer Student Clubs UVT 2021
 
-This repository contains everything I worked on Google Developer Student Club (UVT) (november 2021 - present), at the Angular workshop.
-<br/>
 [GDSC Organization](https://github.com/gdsc-uvt)
