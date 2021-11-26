@@ -1,0 +1,71 @@
+@import "src/app/shared/globals/variables";
+
+.item-list {
+
+  &__flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__container-content {
+    padding: 1.5rem;
+    color: black;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  &__button {
+    color: $box-button-color;
+  }
+
+  &__button-add {
+    padding-left: 0.45rem;
+    display: flex;
+    color: $box-button-add-color;
+  }
+
+  &__photo {
+    width: 125px;
+    height: auto;
+    border: darkred 1px solid;
+  }
+
+  &__input {
+    width: auto;
+    height: auto;
+  }
+
+  &__flex-item {
+    background: $box-color;
+    padding-bottom: 5rem;
+    width: 700px;
+    height: auto;
+
+    margin-top: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  &__flex-item-list {
+    background: $box-item;
+    padding: 1px;
+    width: 200px;
+    height: auto;
+
+    margin-top: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+}

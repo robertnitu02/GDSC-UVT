@@ -1,0 +1,47 @@
+<div class="item-list">
+
+  <ul class="item-list__flex-container">
+    <li class="item-list__container-content">
+      <div class="item-list__container-title">
+        <input type="text" class="item-list__input" matInput placeholder="imgur image link" #imgurLink1>
+        <button class="item-list__button" mat-stroked-button (click)="addToAdoptCatsList()">Add To Adopt Cats List</button>
+      </div>
+    </li>
+    <li class="item-list__container-content">
+      <div class="item-list__container-title">
+        <input class="item-list__input" matInput placeholder="imgur image link" #imgurLink2>
+        <button class="item-list__button" mat-stroked-button (click)="addToAdoptedCatsList()">Add To Adopted Cats List</button>
+      </div>
+    </li>
+  </ul>
+  <!--  HEADER -->
+
+  <ul class="item-list__flex-container">
+
+    <li class="item-list__flex-item">
+      <ul *ngFor="let sellItem of sellItemsList; index as i" class="item-list__flex-container">
+        <li class="item-list__flex-item-list">
+          <img class="item-list__photo"
+               src="{{ sellItem.cat_photo ? sellItem.cat_photo : 'https://i.imgur.com/suIz656.png' }}" alt="{{ sellItem.cat_alt ? sellItem.cat_alt : 'cat x' }}" />
+          <button mat-icon-button color="accent" class="item-list__button-add" mat-stroked-button (click)="onItemClicked(sellItem, i, 'toCart')">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </li>
+      </ul>
+    </li>
+
+    <li class="item-list__flex-item">
+      <ul *ngFor="let cartItem of inCartList; index as i" class="item-list__flex-container">
+        <li class="item-list__flex-item-list">
+          <img class="item-list__photo"
+               src="{{ cartItem.cat_photo ? cartItem.cat_photo : 'https://i.imgur.com/suIz656.png' }}" alt="{{ cartItem.cat_alt ? cartItem.cat_alt : 'cat x' }}" />
+          <button mat-icon-button color="accent" class="item-list__button-add" mat-stroked-button (click)="onItemClicked(cartItem, i, 'toSell')">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+
+</div>
