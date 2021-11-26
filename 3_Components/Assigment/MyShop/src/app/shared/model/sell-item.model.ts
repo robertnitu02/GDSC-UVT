@@ -1,5 +1,4 @@
 export interface SellItemModel {
-  product_name: string;
-  price: number;
-  stock: number;
+  cat_photo: string;
+  cat_alt: string;
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import { SellItemModel } from '../../shared/model/sell-item.model';
 import { removedMaterialVariables } from '@angular/material/schematics/ng-update/migrations/theming-api-v12/config';
 
@@ -35,5 +35,13 @@ export class ItemListComponent implements OnInit {
         this.inCartList.pop();
       }
     }
+  }
+
+  addToAdoptCatsList() {
+    // todo
+  }
+
+  addToAdoptedCatsList() {
+    // todo
   }
 }

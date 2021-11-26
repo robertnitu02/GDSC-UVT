@@ -11,15 +11,25 @@ export class AppComponent {
 
   sellItemsList: SellItemModel[] = [
     {
-      product_name: 'item1',
-      price: 1000,
-      stock: 1,
+      cat_photo: 'https://i.imgur.com/S1dunqm.jpg',
+      cat_alt: 'cat 3',
     },
     {
-      product_name: 'item2',
-      price: 2000,
-      stock: 2,
+      cat_photo: 'https://i.imgur.com/otpUuNs.jpg',
+      cat_alt: 'cat 2',
     },
+    {
+      cat_photo: '',
+      cat_alt: 'cat 3',
+    },
+    {
+      cat_photo: 'https://th.bing.com/th/id/R.5228d6aef0e0efde5bccc4220def2c3f?rik=wS24gq1vnUkhrQ&pid=ImgRaw&r=0',
+      cat_alt: 'cat 4',
+    },
+    {
+      cat_photo: 'https://th.bing.com/th/id/OIP.bRtlDIYURd4Hw7QDVY1XLgFZC1?pid=ImgDet&rs=1',
+      cat_alt: 'cat 5',
+    }
   ];
 
   inCartList: SellItemModel[] = [];

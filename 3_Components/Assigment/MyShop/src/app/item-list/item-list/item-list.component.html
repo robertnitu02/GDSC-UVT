@@ -3,14 +3,14 @@
   <ul class="item-list__flex-container">
     <li class="item-list__container-content">
       <div class="item-list__container-title">
-        <input class="item-list__input" matInput placeholder="Input #1">
-        <button class="item-list__button" mat-stroked-button>Primary</button>
+        <input type="text" class="item-list__input" matInput placeholder="imgur image link" #imgurLink1>
+        <button class="item-list__button" mat-stroked-button (click)="addToAdoptCatsList()">Add To Adopt Cats List</button>
       </div>
     </li>
     <li class="item-list__container-content">
       <div class="item-list__container-title">
-        <input class="item-list__input" matInput placeholder="Input #2">
-        <button class="item-list__button" mat-stroked-button>Primary</button>
+        <input class="item-list__input" matInput placeholder="imgur image link" #imgurLink2>
+        <button class="item-list__button" mat-stroked-button (click)="addToAdoptedCatsList()">Add To Adopted Cats List</button>
       </div>
     </li>
   </ul>
@@ -21,10 +21,11 @@
     <li class="item-list__flex-item">
       <ul *ngFor="let sellItem of sellItemsList; index as i" class="item-list__flex-container">
         <li class="item-list__flex-item-list">
-          <span class="item-list__product-name"> {{ sellItem.product_name }}</span>
-          <!--          <span class="item-list__price"> {{ sellItem.price }}</span>-->
-          <!--          <span class="item-list__stock"> {{ sellItem.stock }}</span>-->
-          <button (click)="onItemClicked(sellItem, i, 'toCart')">CLICK</button>
+          <img class="item-list__photo"
+               src="{{ sellItem.cat_photo ? sellItem.cat_photo : 'https://i.imgur.com/suIz656.png' }}" alt="{{ sellItem.cat_alt ? sellItem.cat_alt : 'cat x' }}" />
+          <button mat-icon-button color="accent" class="item-list__button-add" mat-stroked-button (click)="onItemClicked(sellItem, i, 'toCart')">
+            <mat-icon>favorite</mat-icon>
+          </button>
         </li>
       </ul>
     </li>
@@ -32,10 +33,11 @@
     <li class="item-list__flex-item">
       <ul *ngFor="let cartItem of inCartList; index as i" class="item-list__flex-container">
         <li class="item-list__flex-item-list">
-          <span class="item-list__product-name"> {{ cartItem.product_name }}</span>
-          <!--          <span class="item-list__price"> {{ cartItem.price }}</span>-->
-          <!--          <span class="item-list__stock"> {{ cartItem.stock }}</span>-->
-          <button (click)="onItemClicked(cartItem, i, 'toSell')">CLICK</button>
+          <img class="item-list__photo"
+               src="{{ cartItem.cat_photo ? cartItem.cat_photo : 'https://i.imgur.com/suIz656.png' }}" alt="{{ cartItem.cat_alt ? cartItem.cat_alt : 'cat x' }}" />
+          <button mat-icon-button color="accent" class="item-list__button-add" mat-stroked-button (click)="onItemClicked(cartItem, i, 'toSell')">
+            <mat-icon>favorite</mat-icon>
+          </button>
         </li>
       </ul>
     </li>

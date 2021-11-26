@@ -24,6 +24,18 @@
     color: $box-button-color;
   }
 
+  &__button-add {
+    padding-left: 0.45rem;
+    display: flex;
+    color: $box-button-add-color;
+  }
+
+  &__photo {
+    width: 125px;
+    height: auto;
+    border: darkred 1px solid;
+  }
+
   &__input {
     width: auto;
     height: auto;
