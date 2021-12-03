@@ -13,6 +13,7 @@
   }
 
   &__container-content {
+    display: contents;
     padding: 1.5rem;
     color: black;
     font-weight: bold;
@@ -28,17 +29,19 @@
     padding-left: 0.45rem;
     display: flex;
     color: $box-button-add-color;
+
   }
 
   &__photo {
     width: 125px;
     height: auto;
-    border: darkred 1px solid;
+    border: $photo-border 1px solid;
   }
 
   &__input {
     width: auto;
     height: auto;
+    display: flex;
   }
 
   &__flex-item {
@@ -49,7 +52,7 @@
 
     margin-top: 10px;
     line-height: 150px;
-    color: white;
+    color: $white-color;
     font-weight: bold;
     font-size: 3em;
     text-align: center;
@@ -63,7 +66,7 @@
 
     margin-top: 10px;
     line-height: 150px;
-    color: white;
+    color: $white-color;
     font-weight: bold;
     font-size: 3em;
     text-align: center;

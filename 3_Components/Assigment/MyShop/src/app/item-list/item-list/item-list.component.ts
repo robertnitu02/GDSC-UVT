@@ -50,7 +50,7 @@ export class ItemListComponent implements OnInit {
       // var string = "{\"cat_photo\": \"" + this.input1 + "\", \"cat_alt\": \"cat\"}";
       // console.log(string);
     }
-    this.input1 = "";
+    this.input1 = undefined;
   }
 
   addToAdoptedCatsList() {
@@ -62,6 +62,6 @@ export class ItemListComponent implements OnInit {
       this.inCartList.push(item);
       // console.log(this.input2);
     }
-    this.input2 = "";
+    this.input2 = undefined;
   }
 }
