@@ -8,17 +8,19 @@ import { AppComponent } from './app.component';
 import { ItemListComponent } from './item-list/item-list/item-list.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from "@angular/material/icon";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [AppComponent, ItemListComponent],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        NoopAnimationsModule,
-        MatButtonModule,
-        MatInputModule,
-        MatIconModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NoopAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatIconModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

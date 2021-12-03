@@ -1,6 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { SellItemModel } from '../../shared/model/sell-item.model';
-import { removedMaterialVariables } from '@angular/material/schematics/ng-update/migrations/theming-api-v12/config';
 
 @Component({
   selector: 'app-item-list',
@@ -10,7 +9,10 @@ import { removedMaterialVariables } from '@angular/material/schematics/ng-update
 export class ItemListComponent implements OnInit {
   @Input() sellItemsList: SellItemModel[] = [];
   @Input() inCartList: SellItemModel[] = [];
+  @Output() inCartListOutput: SellItemModel[] = [];
   @Output() sellItemsListChange = new EventEmitter<SellItemModel[]>();
+  input1: any;
+  input2: any;
 
   constructor() {}
 
@@ -38,10 +40,28 @@ export class ItemListComponent implements OnInit {
   }
 
   addToAdoptCatsList() {
-    // todo
+    if (this.input1 != undefined) {
+      let item: SellItemModel = {
+        cat_alt: "cat",
+        cat_photo: this.input1
+      };
+      this.sellItemsList.push(item);
+      // console.log(this.input1);
+      // var string = "{\"cat_photo\": \"" + this.input1 + "\", \"cat_alt\": \"cat\"}";
+      // console.log(string);
+    }
+    this.input1 = "";
   }
 
   addToAdoptedCatsList() {
-    // todo
+    if (this.input2 != undefined) {
+      let item: SellItemModel = {
+        cat_alt: "cat",
+        cat_photo: this.input2
+      };
+      this.inCartList.push(item);
+      // console.log(this.input2);
+    }
+    this.input2 = "";
   }
 }
