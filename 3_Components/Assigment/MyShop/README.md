@@ -28,5 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Assigment Result
 
-![Assigment1 Result](https://i.imgur.com/7KKaCC8.gif)
+![Assigment1 Result 2.0](http://i.imgur.com/m5cHaJbh.gif)
 <br/>
