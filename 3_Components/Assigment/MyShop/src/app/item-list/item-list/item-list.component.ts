@@ -27,14 +27,14 @@ export class ItemListComponent implements OnInit {
         console.log('Elementul deja este in lista de cumparaturi!');
       } else {
         this.inCartList.push(sellItem);
-        this.sellItemsList.pop();
+        this.sellItemsList.splice(i, 1);
       }
     } else if (status.toLowerCase() == 'tosell') {
       if (this.sellItemsList.indexOf(sellItem, 0) != -1) {
         console.log('Elementul deja este in lista de vanzare!');
       } else {
         this.sellItemsList.push(sellItem);
-        this.inCartList.pop();
+        this.inCartList.splice(i, 1);
       }
     }
   }
