@@ -1,0 +1,30 @@
+<div class="info">
+  <div class="info__center">
+    <img src="https://i.imgur.com/W3cUCQV.png" alt="click-image" class="item-content__img">
+    <h4>click on any box</h4>
+  </div>
+  <div class="info__center">
+    <img src="https://i.imgur.com/IQ2lmvJ.png" alt="scroll-image" class="item-content__img">
+    <h4>scroll to decrease/increase value</h4>
+  </div>
+</div>
+
+<div class="item-content">
+  <ng-container *ngFor="let listData of allData; index as i"
+                [ngTemplateOutlet]="listTemplate"
+                [ngTemplateOutletContext]="{list: listData.list, counter: listData.counter, i: i}">
+  </ng-container>
+
+  <ng-template let-list="list" let-counter="counter" let-i="i" #listTemplate>
+    <div class="item-content__list-box" appScrollThing (changeCountEmitter)="onCounterChanged($event, i)">
+      <h3 class="item-content__list-counter">Value: {{ counter }}</h3>
+      <div *ngFor="let item of list" class="item-content__list-item">
+        {{ item }}
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+<!--<ng-template #notLoggedIn>-->
+<!--  <h1> You are not logged in! </h1>-->
+<!--</ng-template>-->

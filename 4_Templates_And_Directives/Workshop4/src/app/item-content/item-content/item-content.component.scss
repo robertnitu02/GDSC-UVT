@@ -1,0 +1,59 @@
+@import "src/app/shared/constants/variables.scss";
+
+.item-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+  }
+
+  &__list-box {
+    margin: 10px;
+    width: 160px;
+    height: auto;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    background-color: $list-box-color;
+  }
+
+  &__list-item {
+    color: $white;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  &__list-counter {
+    color: $black;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.info {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+
+  width: 190px;
+  height: auto;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  background-color: $list-info-color;
+
+  &__center {
+    text-align: center;
+  }
+}
+
+h4 {
+  vertical-align: middle;
+}
