@@ -1,12 +1,27 @@
+@import "src/app/shared/constants/variables.scss";
+
 .item-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 450px;
-  height: 450px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  &__list-box {
+    margin: 10px;
+    width: 125px;
+    height: auto;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    background-color: $list-box-color;
+  }
+
+  &__list-item {
+    color: $white;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }

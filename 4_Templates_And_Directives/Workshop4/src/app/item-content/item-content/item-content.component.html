@@ -1,3 +1,17 @@
 <div class="item-content">
-  <p>item-content works!</p>
+
+  <ng-container [ngTemplateOutlet]="listTemplate" [ngTemplateOutletContext]="{list: listaVocale}"></ng-container>
+  <ng-container [ngTemplateOutlet]="listTemplate" [ngTemplateOutletContext]="{list: listaConsoane}"></ng-container>
+
+  <ng-template let-list="list" #listTemplate>
+    <div class="item-content__list-box">
+      <div *ngFor="let item of list" class="item-content__list-item">
+        {{ item }}
+      </div>
+    </div>
+  </ng-template>
 </div>
+
+<!--<ng-template #notLoggedIn>-->
+<!--  <h1> You are not logged in! </h1>-->
+<!--</ng-template>-->
