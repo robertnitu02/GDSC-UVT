@@ -1,0 +1,11 @@
+<div class="app">
+  <div class="app__navigation">
+    <a class="app__navigation-button" routerLink="/home" routerLinkActive="active"> <span class="app__navigation-text">Home</span> </a>
+    <a class="app__navigation-button" routerLink="/about" routerLinkActive="active"> <span class="app__navigation-text">About</span> </a>
+    <a class="app__navigation-button" routerLink="/about/contact" routerLinkActive="active"> <span class="app__navigation-text">About/Contact</span> </a>
+    <a class="app__navigation-button" (click)="router.navigate(['./about/contact', { 'id': '69'}])"> <span class="app__navigation-text"> About/Contact/ID(in)</span> </a>
+  </div>
+  <div class="router-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
