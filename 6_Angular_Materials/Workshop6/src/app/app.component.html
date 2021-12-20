@@ -1,0 +1,26 @@
+<div class="app">
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+      Sidenav content
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <mat-toolbar class="app__toolbar" color="accent">
+        <div class="app__toolbar__left">
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span>Workshop 6</span>
+        </div>
+        <div class="app__toolbar__right">
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+          </button>
+        </div>
+      </mat-toolbar>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
