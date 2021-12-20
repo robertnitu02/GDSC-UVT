@@ -11,10 +11,16 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {FormsModule} from "@angular/forms";
+import { AboutPageComponent } from './about-page/about-page.component';
+import {MatListModule} from "@angular/material/list";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatRippleModule} from "@angular/material/core";
+import {MatChipsModule} from "@angular/material/chips";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,11 @@ import {FormsModule} from "@angular/forms";
     MatButtonModule,
     MatSidenavModule,
     MatCheckboxModule,
-    FormsModule
+    FormsModule,
+    MatListModule,
+    MatGridListModule,
+    MatRippleModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

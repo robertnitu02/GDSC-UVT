@@ -11,7 +11,17 @@
     }
   }
 
-  .example-container {
+  &__sidenav {
+    &__list {
+      &__action {
+        &.active {
+          background-color: darkcyan;
+        }
+      }
+    }
+  }
+
+  &__sidenav-container {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -19,10 +29,29 @@
     right: 0;
   }
 
-  .example-events {
-    width: 300px;
-    height: 200px;
-    overflow: auto;
-    border: 1px solid #555;
+  &__minigame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &__button {
+      cursor: pointer;
+      text-align: center;
+      width: 180px;
+      height: 180px;
+      line-height: 180px;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    &__stats {
+      padding-top: 1rem;
+      text-align: center;
+    }
+    &__points-text {
+      color: #048c8c;
+    }
   }
 }
