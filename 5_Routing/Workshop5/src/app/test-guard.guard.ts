@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class TestGuardGuard implements CanActivate {
-  isLoggedIn = false;
+  isLoggedIn = true;
 
   constructor(private router: Router) {}
 
