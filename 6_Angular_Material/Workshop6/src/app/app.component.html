@@ -1,0 +1,45 @@
+<div class="app">
+  <mat-sidenav-container class="app__sidenav-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+      <mat-action-list>
+        <button mat-list-item routerLink="./home" routerLinkActive="active" class="app__sidenav__list__action">Home</button>
+        <button mat-list-item routerLink="./about" routerLinkActive="active" class="app__sidenav__list__action">About</button>
+      </mat-action-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <mat-toolbar class="app__toolbar" color="accent">
+        <div class="app__toolbar__left">
+          <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span>Workshop 6</span>
+        </div>
+        <div class="app__toolbar__right">
+          <button mat-icon-button>
+            <mat-icon>local_drink</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>money</mat-icon>
+          </button>
+        </div>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+      <div class="app__minigame">
+        <div class="app__minigame__button mat-elevation-z4"
+             matRipple
+             [matRippleCentered]="centered"
+             [matRippleDisabled]="disabled"
+             [matRippleUnbounded]="unbounded"
+             [matRippleRadius]="radius"
+             [matRippleColor]="color"
+            (click)="increasePoints(valueToIncrease)">
+          Apasă-mă!
+        </div>
+        <div class="app__minigame__stats">
+          <h2>Punctele tale: <span class="app__minigame__points-text">{{ points }}</span></h2>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
