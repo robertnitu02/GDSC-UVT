@@ -1,0 +1,13 @@
+.verify {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid red;
+}
+
+p {
+  text-align: center;
+  font-size: 50px;
+  color: darkred;
+}

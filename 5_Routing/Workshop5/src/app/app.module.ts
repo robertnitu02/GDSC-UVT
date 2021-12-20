@@ -8,6 +8,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { ContactIdPageComponent } from './contact-id-page/contact-id-page.component';
+import { VerifyPageComponent } from './verify-page/verify-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContactIdPageComponent } from './contact-id-page/contact-id-page.compon
     AboutPageComponent,
     ContactPageComponent,
     NotFoundPageComponent,
-    ContactIdPageComponent
+    ContactIdPageComponent,
+    VerifyPageComponent
   ],
   imports: [
     BrowserModule,
