@@ -7,6 +7,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { ContactIdPageComponent } from './contact-id-page/contact-id-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     HomePageComponent,
     AboutPageComponent,
     ContactPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    ContactIdPageComponent
   ],
   imports: [
     BrowserModule,
