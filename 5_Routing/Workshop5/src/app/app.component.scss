@@ -1,0 +1,40 @@
+.app {
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+
+  &__navigation {
+    display: table;
+    margin: 0 auto;
+  }
+
+  &__navigation-button {
+    text-decoration: none;
+    border: 3px solid #365d5d;
+    background-color: #0c5656;
+    height: 50px;
+    min-height: 100px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    line-height: 50px;
+
+    &:hover {
+      background-color: #0da8a8;
+    }
+  }
+
+  &__navigation-text {
+    color: white;
+  }
+}
+
+.router-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 450px;
+  border: 3px solid #124d4d;
+}
