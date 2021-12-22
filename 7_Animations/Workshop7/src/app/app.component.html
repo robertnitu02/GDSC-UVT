@@ -1,0 +1,14 @@
+<div @fadeInOutAnimation class="app">
+  <div @fadeInOutAnimation class="app__firstText" *ngIf="isHelloVisible">
+    <h1>Hello World!</h1>
+  </div>
+  <div class="app__buttonCenter">
+    <button mat-flat-button (click)="changeHelloVisible()">fadeInOutAnimation</button>
+  </div>
+  <div *ngFor="let vers of versuri" [@enterFromRightAnimation]="isAnotherHelloVisible" class="app__secondText">
+    <h1>{{ vers }}</h1>
+  </div>
+  <div class="app__buttonCenter">
+    <button mat-flat-button (click)="changeAnotherHelloVisible()">enterFromRightAnimation</button>
+  </div>
+</div>
